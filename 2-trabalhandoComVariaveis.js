@@ -4,7 +4,7 @@ console.log("Trabalhando com variáveis");
 
 const idade = 29;
 const nome = "Pedro";
-let ano = 2021;
+let ano = 20;
 console.log(idade);
 console.log(nome);
 console.log(ano);
