@@ -14,8 +14,8 @@ pacientes.forEach(function(paciente) {
     var tdAltura = paciente.querySelector(".info-altura");
     var altura = tdAltura.textContent;
 
-    var pesoValido =  peso < 500 && peso > 0;
-    var alturaValida = altura < 2.10 && altura > 0;
+    var pesoValido =  validaPeso(peso);
+    var alturaValida = validaAltura(altura);
 
     if (pesoValido && alturaValida) {
         var tdImc = paciente.querySelector(".info-imc");
@@ -30,7 +30,21 @@ pacientes.forEach(function(paciente) {
 
 });
 
-function calculaImc(peso,altura){
+function validaPeso(peso) {
+    if (peso < 500  && peso > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function validaAltura(altura) {
+    if (alturaValida =  altura < 500 && altura > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function calculaImc(peso,altura) {
     var imc = 0;
     imc = peso/Math.pow(altura,2);
     return imc.toFixed(2);;
