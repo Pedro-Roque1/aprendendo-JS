@@ -1,7 +1,6 @@
-//console.log("fui carregado de um arquivo externo");
+
 var titulo = document.querySelector(".titulo");
-			//console.log(titulo);
-			//console.log(titulo.textContent);
+			
 titulo.textContent = "Aparecida Nutricionista";
 
 var pacientes = document.querySelectorAll(".paciente");

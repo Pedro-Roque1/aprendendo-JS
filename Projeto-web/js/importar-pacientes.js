@@ -1,24 +1,20 @@
-/////////////////////////////////////////////REQUISIÇÃO AJAX = FAZER REQUISIÇÃO COM JS DE MODO ASSÍNCRONO (SEM PARAR A ATV JS)////////////////////////////////////////////////////////////////
 
 var botaoAdicionar = document.querySelector("#buscar-pacientes");
 
 botaoAdicionar.addEventListener("click",function() {
     console.log("importando ...")
 
-    var xhr = new XMLHttpRequest();//objeto de requisição Http
+    var xhr = new XMLHttpRequest();
 
-    xhr.open("GET","https://api-pacientes.herokuapp.com/pacientes"); // configurando a requisição -> abrir nova aba e colar o endereço do site
+    xhr.open("GET","https://api-pacientes.herokuapp.com/pacientes"); 
 
-    xhr.addEventListener("load",function(){ // depois que a resposta estiver carregada, execute a função de mostra-la no meu console
-        //console.log(xhr.responseText);//texto da resposta
+    xhr.addEventListener("load",function(){ 
         var erroAjax = document.querySelector("#erro-ajax");
 
         if (xhr.status == 200) {
             erroAjax.classList.add("invisivel");
             var resposta =xhr.responseText;
-            var pacientes = JSON.parse(resposta);//tranformando json em objeto JS->array
-            // console.log(pacientes);
-            // console.log(typeof pacientes);
+            var pacientes = JSON.parse(resposta);
             pacientes.forEach(paciente => {
                 adicionaPacienteNaTabela(paciente);
             });
@@ -30,7 +26,7 @@ botaoAdicionar.addEventListener("click",function() {
         }
         
     });
-    xhr.send();//enviar requisição
+    xhr.send();
 
 
 });

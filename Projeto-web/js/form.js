@@ -16,7 +16,7 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     adicionaPacienteNaTabela(paciente);
  
-    form.reset();//limpa os campos do Form
+    form.reset();  //limpa os campos do Form
     var ul = document.querySelector("#mensagens-erro");
     ul.innerHTML = "";
 });
@@ -35,7 +35,7 @@ function obtemPacienteDoFormulario(form) {
         altura:form.altura.value,
         gordura: form.gordura.value,
         imc: calculaImc(form.peso.value,form.altura.value)
-    }//objeto paciente
+    } // objeto paciente
     return paciente;
 }
 
