@@ -10,6 +10,8 @@ campoFiltro.addEventListener("input", function() {
         pacientes.forEach(function(paciente) {
             var tdNome = paciente.querySelector(".info-nome");
             var nome = tdNome.textContent;
+            var tdAltura = paciente.querySelector(".info-altura");
+            var altura = tdAltura.textContent;
             //var compara = nome == conteudoFiltro;       
             var expressao = RegExp(conteudoFiltro,"i")
                 if (!expressao.test(nome)){
