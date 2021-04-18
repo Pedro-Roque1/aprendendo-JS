@@ -7,13 +7,13 @@ xhr.addEventListener("load",function(){
     var resposta = xhr.responseText;
     var posts = JSON.parse(resposta);
     
+    
     posts.forEach(function(post) {
         var list = document.querySelector(".list-group");
-        
+         
         var link = document.createElement("a");
         link.classList.add("list-group-item");
-        link.href = "descricao.html";
-        
+        link.href = `descricao.html?id=${post.id}`;
         link.appendChild(montaTitulo(post.title,"md-1"));
         link.appendChild(montaParagrafo(post.title));
        
@@ -21,6 +21,7 @@ xhr.addEventListener("load",function(){
            
     });
 });
+
 
 xhr.send();
 
