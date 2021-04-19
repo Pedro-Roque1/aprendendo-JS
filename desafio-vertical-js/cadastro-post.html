@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">API POSTS</a>
+        </div>
+    </nav>
+
+	<section class="container">
+		<div class="alert alert-success escondido" role="alert"></div>
+		<h4 id="titulo-form">Adicionar novo Post:</h4>
+		<form id="form-adiciona">
+			<div class="">
+				<label for="body">Descrição:</label>
+				<input id="body" name="body" type="text" placeholder="Digite a descrição:" class="campo">
+			</div>
+			<div class="grupo">
+				<label for="title">Título:</label>
+				<input id="title" name="title" type="text" placeholder="Digite o título:" class="campo campo-medio">
+			</div>
+			<div class="grupo">
+				<label for="idUser">Id de usuário:</label>
+				<input id="idUser" name="idUser" type="text" placeholder="Digite id de usuário:" class="campo campo-medio">
+			</div>
+	
+			<button id="adicionar-post" class="botao bto-principal">Adicionar</button>
+		</form>
+	</section>
+   
+    <script src= "js/cadastro-post.js"></script>
+</body>

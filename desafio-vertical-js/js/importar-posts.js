@@ -38,3 +38,4 @@ function montaParagrafo(descricao){
     paragrafo.classList.add("md-1");
     return paragrafo;
 }
+

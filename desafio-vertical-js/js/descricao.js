@@ -1,6 +1,4 @@
 
-
-
 const urlParams = new URLSearchParams(location.search);
 
 var idPost = urlParams.get('id');
